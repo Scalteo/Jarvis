@@ -89,7 +89,7 @@ def ollm(text):
     global tts_in_progress
     OLLAMA_URL = "http://localhost:11434/api/generate"
     MODEL_NAME = "gemma3:4b"
-    payload = {"model": MODEL_NAME, "prompt": text, "stream": False, "system": "Sei un assistente personale di nome Jarvis che parla in italiano, assumi un un carattere simile al Jarvis originale di Iron Man, rispondi sempre con  'Certo signore,', "}
+    payload = {"model": MODEL_NAME, "prompt": text, "stream": False, "system": "Sei un assistente personale di nome Jarvis che parla in italiano"}
     try:
         response = requests.post(OLLAMA_URL, json=payload, timeout=30)
         if response.status_code == 200:
